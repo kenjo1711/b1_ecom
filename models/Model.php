@@ -7,19 +7,33 @@ class Model implements Database {
 		$username = 'root';
 		$password = '';
 		$db = 'b1_ecom';
+
+
+        //Online DB
+        // $host = 'db4free.net';
+        // $username = 'b1ecomken';
+        // $password = 'Jesusmylord1';
+        // $db = 'b1ecomken';
+
 		$cn = mysqli_connect($host, $username, $password, $db);
 
 		return mysqli_query($cn, $query);
 	}
 
-        public static function get_cn() {
-                $host = 'localhost';
-                $username = 'root';
-                $password = '';
-                $db = 'b1_ecom';
+    public static function get_cn() {
+        $host = 'localhost';
+        $username = 'root';
+        $password = '';
+        $db = 'b1_ecom';
 
-                $cn = mysqli_connect($host, $username, $password, $db);
-                return $cn;
+        //Online DB
+        // $host = 'db4free.net';
+        // $username = 'b1ecomken';
+        // $password = 'Jesusmylord1';
+        // $db = 'b1ecomken';
+
+        $cn = mysqli_connect($host, $username, $password, $db);
+        return $cn;
         }
 
 	public static function send_email($post){
